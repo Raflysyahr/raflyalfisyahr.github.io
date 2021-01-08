@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaflySyahr</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        @keyframes  noise-anim-2{0%{clip:rect(20px,9999px,91px,0)}5%{clip:rect(20px,9999px,44px,0)}10%{clip:rect(84px,9999px,55px,0)}15%{clip:rect(40px,9999px,93px,0)}20%{clip:rect(37px,9999px,73px,0)}25%{clip:rect(75px,9999px,57px,0)}30%{clip:rect(89px,9999px,38px,0)}35%{clip:rect(6px,9999px,68px,0)}40%{clip:rect(63px,9999px,17px,0)}45%{clip:rect(55px,9999px,49px,0)}50%{clip:rect(98px,9999px,28px,0)}55%{clip:rect(18px,9999px,57px,0)}60%{clip:rect(18px,9999px,64px,0)}65%{clip:rect(35px,9999px,77px,0)}70%{clip:rect(31px,9999px,59px,0)}75%{clip:rect(30px,9999px,38px,0)}80%{clip:rect(13px,9999px,52px,0)}85%{clip:rect(63px,9999px,91px,0)}90%{clip:rect(96px,9999px,67px,0)}95%{clip:rect(24px,9999px,13px,0)}100%{clip:rect(5px,9999px,29px,0)}}
+        @keyframes noise-anim{0%{clip:rect(78px,9999px,4px,0)}5%{clip:rect(87px,9999px,70px,0)}10%{clip:rect(21px,9999px,60px,0)}15%{clip:rect(79px,9999px,83px,0)}20%{clip:rect(20px,9999px,28px,0)}25%{clip:rect(42px,9999px,78px,0)}30%{clip:rect(71px,9999px,37px,0)}35%{clip:rect(89px,9999px,49px,0)}40%{clip:rect(36px,9999px,48px,0)}45%{clip:rect(77px,9999px,67px,0)}50%{clip:rect(7px,9999px,94px,0)}55%{clip:rect(90px,9999px,79px,0)}60%{clip:rect(48px,9999px,57px,0)}65%{clip:rect(64px,9999px,35px,0)}70%{clip:rect(23px,9999px,88px,0)}75%{clip:rect(68px,9999px,27px,0)}80%{clip:rect(39px,9999px,98px,0)}85%{clip:rect(97px,9999px,57px,0)}90%{clip:rect(61px,9999px,53px,0)}95%{clip:rect(79px,9999px,44px,0)}100%{clip:rect(12px,9999px,19px,0)}}
+
+        .text-1{
+            transform: translate(40px,-65px);opacity: 0;
+            animation: 1.5s showHitext forwards;
+            
+        }
+        .glitch::before{
+            content: attr(data-text);
+            position: absolute;
+            left: -2px;
+            text-shadow: 1px 0 #ff0000;
+            top: 0px;
+            color: #17a2b8;
+            background: #f8f9fc;
+            overflow: hidden;
+            clip: rect(0,900px,0,0);
+            animation: noise-anim-2 2s infinite linear alternate-reverse;
+        }
+        .glitch{
+            position: relative;
+            line-height: 1;
+            /* width: 12.5rem; */
+        }
+        .glitch::after{
+            content: attr(data-text);
+            position: absolute;
+            left:2px;
+            text-shadow: 1px 0 #ff0000;
+            font-size: 15px;
+            top: 0px;
+            color: #17a2b8;
+            background: #f8f9fc;
+            overflow: hidden;
+            clip: rect(0,900px,0,0);
+            animation: noise-anim 3s infinite linear alternate-reverse;
+        }
+        .glitch-hi::before{
+            content: attr(data-text);
+            position: absolute;
+            left: -2px;
+            text-shadow: 1px 0 #df4e4e;
+            top: 0px;
+            color: #343434;
+            background: #f8f9fc;
+            overflow: hidden;
+            clip: rect(0,900px,0,0);
+            animation: noise-anim-2 3s infinite linear alternate-reverse;
+        }
+        .glitch-hi{
+            position: relative;
+            line-height: 1;
+            width: 15rem;
+        }
+        .glitch-hi::after{
+            content: attr(data-text);
+            position: absolute;
+            left:2px;
+            text-shadow: 1px 0 #ff0000;
+            font-size: 15px;
+            top: 0px;
+            color: #ffffff;
+            background: #f8f9fc;
+            overflow: hidden;
+            clip: rect(0,900px,0,0);
+            animation: noise-anim 2s  infinite linear alternate-reverse;
+        }
+        .transition-carousel{
+            transition: 0.5s;
+        }
+        .text-2{
+            transform: translate(40px,-127px);opacity: 0;
+            animation: 2s showdescText forwards;
+            
+        }
+        .clipt-skill{
+            width: 150px;
+            background-image: url('img/box-title.png');
+            height:45px;
+            display: block;
+            transform: skewX(1deg);
+
+        }
+        @keyframes showHitext {
+            0%{
+                transform: translate(40px,-65px);opacity: 0;
+            }
+            20%{
+                transform: translate(40px,70px);
+                opacity: 0;
+            }
+            25%{
+                transform: translate(40px,70px);
+                opacity: 0;
+            }
+            30%{
+                transform: translate(40px,70px);
+                opacity: 1;
+            }
+            60%{
+                transform: translate(40px,70px);
+                opacity: 1;
+            }
+            80%{
+                transform: translate(40px,70px);
+                opacity: 1;
+            }
+            100%{
+                transform: translate(40px,70px);
+                opacity: 1;
+            }
+        }
+        @keyframes showdescText {
+            0%{
+                transform: translate(40px,-127px);opacity: 0;
+                
+            }
+            20%{
+                transform: translate(40px,-127px);opacity: 0;
+            }
+            40%{
+                transform: translate(40px,90px);
+                opacity: 1;
+            }
+            60%{
+                transform: translate(40px,90px);
+                opacity: 1;
+            }
+            80%{
+                transform: translate(40px,90px);
+                opacity: 1;
+            }
+            100%{
+                transform: translate(40px,90px);
+                opacity: 1;
+            }
+        }
+    </style>
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <div class="content ">
+                <nav class="navbar bg-white navbar-light shadow-sm">
+                    <a href="" class="navbar-brand ">Raflysyahr </a>
+                </nav>
+             <div class=" container-fluid p-0">
+                 <div id="carouselExampleControls" class=" carousel slide" data-ride="carousel">
+                     <div class=" carousel-inner transition-carousel" style="overflow: hidden;">
+                         <div class=" carousel-item bg-light active" style="height: 500px;overflow: hidden;">
+                             <h1 class="text-1 text-name-1 glitch-hi bg-transparent" data-text="Hi,Saya Rafly">Hi,Saya Rafly</h1>
+                             <p  class="text-2 text-name-2  bg-transparent" style="width: 400px;">Saya berasal dari kota majalengka
+                                Saya belajar web programing  dari kelas 
+                                1 smk sampe sekarang kelas 3 smk saya belajar secara autodidak dengan mengumpulkan semua informasi dan memperaktikan nya dalam sebuah projeck
+                                
+                                Terimkasih telah mengunjungi web saya :) </p>
+                         </div>
+                         <div class=" carousel-item bg-light transition-carousel" style="height: 500px;overflow: hidden;">
+                             <h1 class="text-1 text-name-1 bg-transparent">Hi,Saya Rafly Syahr</h1>
+                             <p  class="text-2 text-name-2  bg-transparent" style="width: 400px;">Saya berasal dari kota majalengka
+                                Saya belajar web programing  dari kelas 
+                                1 smk sampe sekarang kelas 3 smk saya belajar secara autodidak dengan mengumpulkan semua informasi dan memperaktikan nya dalam sebuah projeck
+                                
+                                Terimkasih telah mengunjungi web saya :)</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <span class="clipt-skill">
+                     <p class="ml-4 pt-2 text-white font-weight-bold">SKILL</p>
+                 </span>
+                 <div class="row mr-0 mt-2 mb-2 ml-1">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                               <div class=" mx-auto glitch mb-0 text-info font-weight-bold" style="width: 3rem;" data-text="HTML">HTML</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                               <div class="  mx-auto glitch mb-0 text-info font-weight-bold" style="width: 3rem;"  data-text="CSS">CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div  class="  mx-auto glitch mb-0 text-info font-weight-bold" style="width: 6rem;" data-text="JAVASCRIPT">JAVASCRIPT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class=" mx-auto  glitch mb-0 text-info font-weight-bold" style="width: 3rem;" data-text="PHP">PHP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="row mr-0">
+                     <div class="col-lg">
+                         <div class="col-lg-5 bg-light">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi sint aspernatur, dolor minus perspiciatis odit saepe, repudiandae illum veniam provident optio. Voluptatum nesciunt error harum cupiditate atque sit perspiciatis?</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+
+    $('.carousel').carousel({
+        interval:6000,
+        pause:'',
+        transition:500,
+        indicator:true
+    });
+
+    function cssLoader(time,fungsi){
+            setInterval(function(){
+                $('.time').text(time+"s");
+                time= time-1;
+                if(time == 0){
+                fungsi;
+            }
+            },1000)
+            
+        }
+    function removeclasses(time,classes,removeclass){
+            setInterval(function(){
+                // $('.time').text(time+"s");
+                time= time-1;
+                if(time == 0){
+                $(classes).removeClass(removeclass);
+            }
+            },1000)
+            
+        }
+
+
+
+
+        
+   
+    function textname1(){
+        cssLoader(1,'.text-name-1','animation','4s showHitext  forwards');
+        cssLoader(2,'.text-name-2','animation','3s showdescText  forwards');
+    }
+
+    function textname2(){
+        cssLoader(1,'.text-name-3','animation','4s showHitext  forwards');
+        cssLoader(2,'.text-name-4','animation','3s showdescText  forwards');
+    }
+    textname1();
+    textname1();
+
+</script>
+</html>
